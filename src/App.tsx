@@ -6,6 +6,8 @@ import { Toaster } from "@/components/ui/toaster";
 
 const Home = lazy(() => import("@/pages/Home"));
 const About = lazy(() => import("@/pages/About"));
+const Catalogue = lazy(() => import("@/pages/Catalogue"));
+const FAQ = lazy(() => import("@/pages/FAQ"));
 const Contact = lazy(() => import("@/pages/Contact"));
 
 const App = () => {
@@ -16,6 +18,8 @@ const App = () => {
           <Route element={<MainLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/catalogue" element={<Catalogue />} />
+            <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>
