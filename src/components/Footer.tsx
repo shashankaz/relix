@@ -216,7 +216,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="min-h-20 py-4 flex flex-col sm:flex-row items-center justify-between">
-        <p className="text-gray-400 text-sm md:text-base font-medium text-center sm:text-left">
+        <p className="text-gray-400 text-sm font-light text-center sm:text-left">
           &copy;2025 Untitled. All rights reserved.
         </p>
         <div className="flex gap-3 mt-4 sm:mt-0">
