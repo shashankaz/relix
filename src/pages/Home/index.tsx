@@ -1,10 +1,25 @@
 import { ArrowUpRight } from "lucide-react";
 
+import Collections from "./_components/Collections";
+import Announcement from "./_components/Announcement";
+import Services from "./_components/Services";
+
 const Home = () => {
   return (
     <div>
-      <h1 className="text-[13vw] text-center tracking-tighter font-semibold uppercase">
-        Satisfaction
+      <h1 className="text-[12vw] flex justify-between font-semibold uppercase">
+        <span>S</span>
+        <span>A</span>
+        <span>T</span>
+        <span>I</span>
+        <span>S</span>
+        <span>F</span>
+        <span>A</span>
+        <span>C</span>
+        <span>T</span>
+        <span>I</span>
+        <span>O</span>
+        <span>N</span>
       </h1>
       <div className="flex flex-col md:flex-row justify-between gap-10">
         <p className="md:w-1/2 text-center md:text-start leading-relaxed text-gray-600">
@@ -52,10 +67,9 @@ const Home = () => {
           </div>
         </div>
       </div>
-      <div className="h-[30vh] mt-8 bg-[url('https://images.pexels.com/photos/262367/pexels-photo-262367.jpeg')] bg-cover bg-center bg-fixed flex items-center overflow-hidden">
-        <h1></h1>
-      </div>
-      <div></div>
+      <Services />
+      <Announcement />
+      <Collections />
     </div>
   );
 };
