@@ -12,7 +12,11 @@ export default {
   			poppins: [
   				'Poppins',
   				'sans-serif'
-  			]
+  			],
+			kalam: [
+				'Kalam',
+				'serif'
+			]
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
