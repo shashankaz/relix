@@ -3,7 +3,7 @@ import { Input } from "./ui/input";
 
 const Newsletter = () => {
   return (
-    <div className="bg-gray-50 p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 my-10">
+    <div className="bg-primary text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 my-10">
       <div>
         <h1 className="text-2xl md:text-3xl font-semibold font-montserrat mb-3">
           Join our weekly newsletter
@@ -15,7 +15,7 @@ const Newsletter = () => {
       <div className="flex gap-1 bg-white p-1 rounded-lg border w-full md:w-fit">
         <Input
           placeholder="Enter your email"
-          className="border-none shadow-none outline-none w-full md:w-80 ring-0"
+          className="border-none shadow-none outline-none w-full md:w-80 ring-0 text-black"
         />
         <Button>Subscribe</Button>
       </div>
