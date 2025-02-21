@@ -14,7 +14,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { MapPin, MessagesSquare, PhoneCall, Send, Twitter } from "lucide-react";
+import { MessagesSquare, PhoneCall, Send, Twitter } from "lucide-react";
 
 const items = [
   { id: "residential-design", label: "Residential Design" },
