@@ -141,25 +141,39 @@ const OverLay = ({ setIsOpen }: OverLayProps) => {
       </button>
       <ul className="flex flex-col gap-4 items-center justify-center h-full text-xl font-medium">
         <li>
-          <Link to="/">Home</Link>
+          <Link onClick={() => setIsOpen(false)} to="/">
+            Home
+          </Link>
         </li>
         <li className="flex items-center gap-1">
-          <Link to="/about">About</Link>
+          <Link onClick={() => setIsOpen(false)} to="/about">
+            About
+          </Link>
         </li>
         <li className="flex items-center gap-1">
-          <Link to="/catalogue">Catalogue</Link>
+          <Link onClick={() => setIsOpen(false)} to="/catalogue">
+            Catalogue
+          </Link>
         </li>
         <li className="flex items-center gap-1">
-          <Link to="/services">Services</Link>
+          <Link onClick={() => setIsOpen(false)} to="/services">
+            Services
+          </Link>
         </li>
         <li className="flex items-center gap-1">
-          <Link to="/blog">Blog</Link>
+          <Link onClick={() => setIsOpen(false)} to="/blog">
+            Blog
+          </Link>
         </li>
         <li className="flex items-center gap-1">
-          <Link to="/faq">FAQ</Link>
+          <Link onClick={() => setIsOpen(false)} to="/faq">
+            FAQ
+          </Link>
         </li>
         <li className="flex items-center gap-1">
-          <Link to="/contact">Contact</Link>
+          <Link onClick={() => setIsOpen(false)} to="/contact">
+            Contact
+          </Link>
         </li>
       </ul>
     </div>
