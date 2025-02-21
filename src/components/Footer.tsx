@@ -1,5 +1,5 @@
 import { motion } from "motion/react";
-import { Dribbble, Facebook, Github, Linkedin, Twitter } from "lucide-react";
+import { Instagram, Linkedin, Twitter, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -123,7 +123,7 @@ const Footer = () => {
                 whileHover={{ x: 12 }}
                 className="hover:underline hover:cursor-pointer"
               >
-                Pinterest
+                Twitter
               </motion.li>
               <motion.li
                 whileHover={{ x: 12 }}
@@ -145,49 +145,28 @@ const Footer = () => {
             &copy;2025 Reactify UI. All rights reserved.
           </p>
           <div className="flex gap-3 mt-4 sm:mt-0">
-            <motion.div
-              whileHover={{ y: -3 }}
-              className="border rounded-md p-1"
-            >
+            <motion.div whileHover={{ y: -3 }}>
+              <Instagram
+                strokeWidth="1.2"
+                className="h-5 md:h-6 w-5 md:w-6 text-gray-400 hover:cursor-pointer"
+              />
+            </motion.div>
+            <motion.div whileHover={{ y: -3 }}>
               <Twitter
                 strokeWidth="1.2"
-                className="h-5 md:h-6 w-5 md:w-6 text-gray-400"
+                className="h-5 md:h-6 w-5 md:w-6 text-gray-400 hover:cursor-pointer"
               />
             </motion.div>
-            <motion.div
-              whileHover={{ y: -3 }}
-              className="border rounded-md p-1"
-            >
+            <motion.div whileHover={{ y: -3 }}>
               <Linkedin
                 strokeWidth="1.2"
-                className="h-5 md:h-6 w-5 md:w-6 text-gray-400"
+                className="h-5 md:h-6 w-5 md:w-6 text-gray-400 hover:cursor-pointer"
               />
             </motion.div>
-            <motion.div
-              whileHover={{ y: -3 }}
-              className="border rounded-md p-1"
-            >
-              <Facebook
+            <motion.div whileHover={{ y: -3 }}>
+              <Youtube
                 strokeWidth="1.2"
-                className="h-5 md:h-6 w-5 md:w-6 text-gray-400"
-              />
-            </motion.div>
-            <motion.div
-              whileHover={{ y: -3 }}
-              className="border rounded-md p-1"
-            >
-              <Github
-                strokeWidth="1.2"
-                className="h-5 md:h-6 w-5 md:w-6 text-gray-400"
-              />
-            </motion.div>
-            <motion.div
-              whileHover={{ y: -3 }}
-              className="border rounded-md p-1"
-            >
-              <Dribbble
-                strokeWidth="1.2"
-                className="h-5 md:h-6 w-5 md:w-6 text-gray-400"
+                className="h-5 md:h-6 w-5 md:w-6 text-gray-400 hover:cursor-pointer"
               />
             </motion.div>
           </div>
