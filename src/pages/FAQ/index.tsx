@@ -25,7 +25,7 @@ const FAQ = () => {
           These are the most frequently asked questions by our customers.
         </p>
       </div>
-      <div className="py-8 flex gap-6">
+      <div className="pb-8 flex gap-6">
         <button
           onClick={() => {
             setTab("general");
