@@ -8,48 +8,49 @@ const Footer = () => {
         <div className="w-full lg:w-2/6">
           <h1 className="text-3xl font-bold">Reactify UI</h1>
           <p className="mt-3">
-            Design amazing digital experiences that create more happy in the
-            world.
+            Transforming spaces with elegance and functionality. Explore our
+            services, get inspired by our blog, and connect with us to create
+            your dream interiors.
           </p>
         </div>
         <div className="w-full lg:w-4/6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
           <ul className="space-y-2 font-medium">
-            <li className="text-sm mb-3 text-gray-700">Product</li>
+            <li className="text-sm mb-3 text-gray-700">Services</li>
             <motion.li
               whileHover={{ x: 12 }}
               className="hover:underline hover:cursor-pointer"
             >
-              Overview
+              Interior Design Consultation
             </motion.li>
             <motion.li
               whileHover={{ x: 12 }}
               className="hover:underline hover:cursor-pointer"
             >
-              Features
+              Custom Furniture & Decor
             </motion.li>
             <motion.li
               whileHover={{ x: 12 }}
               className="hover:underline hover:cursor-pointer"
             >
-              Solutions
+              3D Design Visualization
             </motion.li>
             <motion.li
               whileHover={{ x: 12 }}
               className="hover:underline hover:cursor-pointer"
             >
-              Tutorials
+              Space Planning
             </motion.li>
             <motion.li
               whileHover={{ x: 12 }}
               className="hover:underline hover:cursor-pointer"
             >
-              Pricing
+              Home Styling
             </motion.li>
             <motion.li
               whileHover={{ x: 12 }}
               className="hover:underline hover:cursor-pointer"
             >
-              Releases
+              Project Management
             </motion.li>
           </ul>
           <ul className="space-y-2 font-medium">
@@ -58,7 +59,25 @@ const Footer = () => {
               whileHover={{ x: 12 }}
               className="hover:underline hover:cursor-pointer"
             >
-              About us{" "}
+              About us
+            </motion.li>
+            <motion.li
+              whileHover={{ x: 12 }}
+              className="hover:underline hover:cursor-pointer"
+            >
+              Our Team
+            </motion.li>
+            <motion.li
+              whileHover={{ x: 12 }}
+              className="hover:underline hover:cursor-pointer"
+            >
+              Client Testimonials
+            </motion.li>
+            <motion.li
+              whileHover={{ x: 12 }}
+              className="hover:underline hover:cursor-pointer"
+            >
+              Portfolio
             </motion.li>
             <motion.li
               whileHover={{ x: 12 }}
@@ -70,25 +89,7 @@ const Footer = () => {
               whileHover={{ x: 12 }}
               className="hover:underline hover:cursor-pointer"
             >
-              Press
-            </motion.li>
-            <motion.li
-              whileHover={{ x: 12 }}
-              className="hover:underline hover:cursor-pointer"
-            >
-              News
-            </motion.li>
-            <motion.li
-              whileHover={{ x: 12 }}
-              className="hover:underline hover:cursor-pointer"
-            >
-              Media kit
-            </motion.li>
-            <motion.li
-              whileHover={{ x: 12 }}
-              className="hover:underline hover:cursor-pointer"
-            >
-              Contact
+              Contact Us
             </motion.li>
           </ul>
           <ul className="space-y-2 font-medium">
@@ -103,25 +104,25 @@ const Footer = () => {
               whileHover={{ x: 12 }}
               className="hover:underline hover:cursor-pointer"
             >
-              Newsletter
+              Design Trends
             </motion.li>
             <motion.li
               whileHover={{ x: 12 }}
               className="hover:underline hover:cursor-pointer"
             >
-              Events
+              Home Improvement Tips
             </motion.li>
             <motion.li
               whileHover={{ x: 12 }}
               className="hover:underline hover:cursor-pointer"
             >
-              Help center
+              Case Studies
             </motion.li>
             <motion.li
               whileHover={{ x: 12 }}
               className="hover:underline hover:cursor-pointer"
             >
-              Tutorials
+              FAQs
             </motion.li>
             <motion.li
               whileHover={{ x: 12 }}
@@ -136,13 +137,13 @@ const Footer = () => {
               whileHover={{ x: 12 }}
               className="hover:underline hover:cursor-pointer"
             >
-              Twitter
+              Instagram
             </motion.li>
             <motion.li
               whileHover={{ x: 12 }}
               className="hover:underline hover:cursor-pointer"
             >
-              Linkedin
+              Pinterest
             </motion.li>
             <motion.li
               whileHover={{ x: 12 }}
@@ -154,57 +155,52 @@ const Footer = () => {
               whileHover={{ x: 12 }}
               className="hover:underline hover:cursor-pointer"
             >
-              GitHub
+              LinkedIn
             </motion.li>
             <motion.li
               whileHover={{ x: 12 }}
               className="hover:underline hover:cursor-pointer"
             >
-              AngelList
+              YouTube
             </motion.li>
             <motion.li
               whileHover={{ x: 12 }}
               className="hover:underline hover:cursor-pointer"
             >
-              Dribbble
+              Twitter
             </motion.li>
           </ul>
           <ul className="space-y-2 font-medium">
+            <li className="text-sm mb-3 text-gray-700">Legal</li>
             <motion.li
               whileHover={{ x: 12 }}
-              className="text-sm mb-3 text-gray-700"
+              className="hover:underline hover:cursor-pointer"
             >
-              Legal
+              Terms & Conditions
             </motion.li>
             <motion.li
               whileHover={{ x: 12 }}
               className="hover:underline hover:cursor-pointer"
             >
-              Terms
+              Privacy Policy
             </motion.li>
             <motion.li
               whileHover={{ x: 12 }}
               className="hover:underline hover:cursor-pointer"
             >
-              Privacy
+              Copyright Notice
             </motion.li>
             <motion.li
               whileHover={{ x: 12 }}
               className="hover:underline hover:cursor-pointer"
             >
-              Cookies
+              Cookie Policy
             </motion.li>
             <motion.li
               whileHover={{ x: 12 }}
               className="hover:underline hover:cursor-pointer"
             >
-              Licenses
-            </motion.li>
-            <motion.li
-              whileHover={{ x: 12 }}
-              className="hover:underline hover:cursor-pointer"
-            >
-              Settings
+              Licensing
             </motion.li>
             <motion.li
               whileHover={{ x: 12 }}
