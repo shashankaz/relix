@@ -1,8 +1,8 @@
 const Services = () => {
   return (
     <div className="py-20">
-      <h1 className="text-6xl font-medium">Our Services</h1>
-      <div className="grid grid-cols-3 gap-10 mt-16">
+      <h1 className="text-4xl md:text-6xl font-medium">Our Services</h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-10 mt-16">
         <div className="flex gap-4">
           <div>
             <img src="/services/Lighting design icon.png" alt="Our Services" />
