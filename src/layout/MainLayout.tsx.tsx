@@ -1,5 +1,6 @@
 import { Fragment, useEffect, useState } from "react";
 import { Outlet } from "react-router";
+import { ToastContainer } from "react-toastify";
 
 import Navbar from "@/components/Navbar";
 import Newsletter from "@/components/Newsletter";
@@ -26,6 +27,18 @@ const MainLayout = () => {
       </div>
       <Footer />
       <ScrollToTop />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick={false}
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+      />
     </Fragment>
   );
 };
