@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
-import { ArrowDown, Equal, X } from "lucide-react";
+import { Equal, X } from "lucide-react";
+import { Link } from "react-router";
 import { Button } from "./ui/button";
 import { useGSAP } from "@gsap/react";
 import { AnimatePresence, motion } from "motion/react";
@@ -55,52 +56,59 @@ const Navbar = () => {
       } flex items-center justify-between z-10`}
     >
       <div className="flex items-center gap-8">
-        <h1 className="text-2xl font-bold">Reactify UI</h1>
+        <motion.h1 whileTap={{ scale: 0.9 }} className="text-2xl font-bold">
+          <Link to="/">Reactify UI</Link>
+        </motion.h1>
         <ul className="hidden md:flex items-center gap-5">
           <motion.li
             whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
             className="font-mediu hover:cursor-pointer"
           >
-            Home
+            <Link to="/">Home</Link>
           </motion.li>
           <motion.li
             whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
             className="flex items-center gap-1 font-mediu hover:cursor-pointer"
           >
-            Products <ArrowDown className="h-5 w-5" />
+            <Link to="/about">About</Link>
           </motion.li>
           <motion.li
             whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
             className="flex items-center gap-1 font-mediu hover:cursor-pointer"
           >
-            Solutions <ArrowDown className="h-5 w-5" />
+            <Link to="/catalogue">Catalogue</Link>
           </motion.li>
           <motion.li
             whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
             className="flex items-center gap-1 font-mediu hover:cursor-pointer"
           >
-            Pricing <ArrowDown className="h-5 w-5" />
+            <Link to="/services">Services</Link>
           </motion.li>
           <motion.li
             whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
             className="flex items-center gap-1 font-mediu hover:cursor-pointer"
           >
-            Resources <ArrowDown className="h-5 w-5" />
+            <Link to="/blog">Blog</Link>
           </motion.li>
           <motion.li
             whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
             className="flex items-center gap-1 font-mediu hover:cursor-pointer"
           >
-            Company <ArrowDown className="h-5 w-5" />
+            <Link to="/faq">FAQ</Link>
           </motion.li>
         </ul>
       </div>
       <div className="hidden md:flex gap-3">
-        <Button variant="ghost">
-          <motion.div whileTap={{ scale: 0.9 }}>Log in</motion.div>
-        </Button>
         <Button>
-          <motion.div whileTap={{ scale: 0.9 }}>Get started</motion.div>
+          <motion.div whileTap={{ scale: 0.9 }}>
+            <Link to="/contact">Contact</Link>
+          </motion.div>
         </Button>
       </div>
       <div className="flex md:hidden">
@@ -138,12 +146,27 @@ const OverLay = ({ setIsOpen }: OverLayProps) => {
         <X />
       </button>
       <ul className="flex flex-col gap-4 items-center justify-center h-full text-xl font-medium">
-        <li>Home</li>
-        <li className="flex items-center gap-1">Products</li>
-        <li className="flex items-center gap-1">Solutions</li>
-        <li className="flex items-center gap-1">Pricing</li>
-        <li className="flex items-center gap-1">Resources</li>
-        <li className="flex items-center gap-1">Company</li>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li className="flex items-center gap-1">
+          <Link to="/about">About</Link>
+        </li>
+        <li className="flex items-center gap-1">
+          <Link to="/catalogue">Catalogue</Link>
+        </li>
+        <li className="flex items-center gap-1">
+          <Link to="/services">Services</Link>
+        </li>
+        <li className="flex items-center gap-1">
+          <Link to="/blog">Blog</Link>
+        </li>
+        <li className="flex items-center gap-1">
+          <Link to="/faq">FAQ</Link>
+        </li>
+        <li className="flex items-center gap-1">
+          <Link to="/contact">Contact</Link>
+        </li>
       </ul>
     </div>
   );
