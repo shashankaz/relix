@@ -17,11 +17,11 @@ import { z } from "zod";
 import { MapPin, MessagesSquare, PhoneCall, Send, Twitter } from "lucide-react";
 
 const items = [
-  { id: "website-design", label: "Website design" },
-  { id: "ux-design", label: "UX design" },
-  { id: "user-research", label: "User research" },
-  { id: "content-creation", label: "Content creation" },
-  { id: "strategy-consulting", label: "Strategy & consulting" },
+  { id: "residential-design", label: "Residential Design" },
+  { id: "commercial-design", label: "Commercial Design" },
+  { id: "space-planning", label: "Space Planning" },
+  { id: "furniture-selection", label: "Furniture Selection" },
+  { id: "lighting-design", label: "Lighting Design" },
   { id: "other", label: "Other" },
 ] as const;
 
@@ -70,14 +70,16 @@ const ContactForm = () => {
 
       <div className="relative flex flex-col items-center justify-center py-20 px-4">
         <div className="max-w-4xl w-full space-y-10">
-          <div className="text-center space-y-4">
-            <h1 className="text-4xl md:text-5xl font-semibold font-montserrat">
-              Contact our team
+          <div className="text-center mb-8">
+            <h6 className="text-lg font-semibold mb-2">
+              Contact <span>Us</span>
+            </h6>
+            <h1 className="text-4xl md:text-5xl font-semibold font-kalam">
+              Let's Connect & Transform Spaces
             </h1>
-            <p className="md:text-lg text-muted-foreground max-w-2xl mx-auto">
-              Got any questions about the product or scaling on our platform?
-              We&apos;re here to help. Chat to our friendly team 24/7 and get
-              onboarded in less than 5 minutes.
+            <p className="md:text-lg text-muted-foreground mt-4">
+              Get in touch with us to discuss your ideas and bring your vision
+              to life.
             </p>
           </div>
 
@@ -150,7 +152,7 @@ const ContactForm = () => {
                       <FormLabel>Phone number</FormLabel>
                       <FormControl>
                         <Input
-                          placeholder="+1 (555) 000-0000"
+                          placeholder="+91 99999 99999"
                           {...field}
                           className="bg-white"
                         />
@@ -258,12 +260,12 @@ const ContactForm = () => {
                 <div className="flex items-center gap-2 mt-3">
                   <PhoneCall className="h-5 w-5" />
                   <span className="font-semibold hover:underline cursor-pointer">
-                    +1 (555) 000-0000
+                    +91 99999 99999
                   </span>
                 </div>
               </div>
 
-              <div>
+              {/* <div>
                 <h2 className="text-xl font-semibold mb-1">Visit us</h2>
                 <p className="text-muted-foreground">
                   Chat to us in person at our Manhattan HQ.
@@ -274,7 +276,7 @@ const ContactForm = () => {
                     100 Smith Street, New York, NY 10001
                   </span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
