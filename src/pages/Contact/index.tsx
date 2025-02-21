@@ -233,19 +233,19 @@ const ContactForm = () => {
                 <ul className="mt-4 space-y-2">
                   <li className="flex items-center gap-2">
                     <MessagesSquare className="h-5 w-5" />
-                    <span className="font-semibold hover:underline cursor-pointer">
+                    <span className="font-medium hover:underline cursor-pointer">
                       Start a live chat
                     </span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Send className="h-5 w-5" />
-                    <span className="font-semibold hover:underline cursor-pointer">
+                    <span className="font-medium hover:underline cursor-pointer">
                       Shoot us an email
                     </span>
                   </li>
                   <li className="flex items-center gap-2">
                     <Twitter className="h-5 w-5" />
-                    <span className="font-semibold hover:underline cursor-pointer">
+                    <span className="font-medium hover:underline cursor-pointer">
                       Message us on X
                     </span>
                   </li>
@@ -259,7 +259,7 @@ const ContactForm = () => {
                 </p>
                 <div className="flex items-center gap-2 mt-3">
                   <PhoneCall className="h-5 w-5" />
-                  <span className="font-semibold hover:underline cursor-pointer">
+                  <span className="font-medium hover:underline cursor-pointer">
                     +91 99999 99999
                   </span>
                 </div>
