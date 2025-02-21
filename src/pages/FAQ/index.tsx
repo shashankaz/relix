@@ -5,7 +5,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import { generalFAQs } from "./GeneralFaqs";
+import { generalFAQs } from "./generalFAQs";
 import { pricingFAQs } from "./pricingFAQs";
 import { servicesFAQs } from "./servicesFAQs";
 
