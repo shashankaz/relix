@@ -13,8 +13,8 @@ export default {
   				'Poppins',
   				'sans-serif'
   			],
-			kalam: [
-				'Kalam',
+			playwrite: [
+				'Playwrite IT Moderna',
 				'serif'
 			]
   		},

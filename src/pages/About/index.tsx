@@ -5,7 +5,7 @@ const About = () => {
         <h6 className="text-lg font-semibold mb-2">
           About <span>Us</span>
         </h6>
-        <h1 className="text-4xl md:text-5xl font-semibold font-kalam">
+        <h1 className="text-4xl md:text-5xl font-semibold font-playwrite">
           Creating Beautiful Spaces
         </h1>
         <p className="md:text-lg text-muted-foreground mt-4">
