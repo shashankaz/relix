@@ -16,6 +16,10 @@ export default {
 			playwrite: [
 				'Playwrite IT Moderna',
 				'serif'
+			],
+			comfortaa: [
+				'Comfortaa',
+				'serif'
 			]
   		},
   		borderRadius: {
