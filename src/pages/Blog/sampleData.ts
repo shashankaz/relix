@@ -7,8 +7,8 @@ export const blogPosts = [
     description:
       "Learn how to create an inspiring and functional home office that boosts productivity and creativity.",
     author: "Daniel Roberts",
-    coverImg: "/blog/blog/home-office.jpg",
-    profileImg: "/blog/authors/daniel.jpg",
+    coverImg: "/blog/home-office.jpg",
+    profileImg: "https://randomuser.me/api/portraits/men/12.jpg",
   },
   {
     id: 2,
@@ -18,8 +18,8 @@ export const blogPosts = [
     description:
       "Transform your bedroom into a luxurious retreat without breaking the bank. Here's how to do it.",
     author: "Emily Davis",
-    coverImg: "/blog/blog/luxury-bedroom.jpg",
-    profileImg: "/blog/authors/emily.jpg",
+    coverImg: "/blog/luxury-bedroom.jpg",
+    profileImg: "https://randomuser.me/api/portraits/women/9.jpg",
   },
   {
     id: 3,
@@ -29,8 +29,8 @@ export const blogPosts = [
     description:
       "Explore the impact of colors on mood and how to choose the perfect palette for your living space.",
     author: "Michael Green",
-    coverImg: "/blog/blog/color-psychology.jpg",
-    profileImg: "/blog/authors/michael.jpg",
+    coverImg: "/blog/color-psychology.jpg",
+    profileImg: "https://randomuser.me/api/portraits/men/13.jpg",
   },
   {
     id: 4,
@@ -40,8 +40,8 @@ export const blogPosts = [
     description:
       "Discover the latest interior design trends that will define 2025, from natural materials to bold color palettes.",
     author: "Sophia Carter",
-    coverImg: "/blog/blog/trends-2025.jpg",
-    profileImg: "/blog/authors/sophia.jpg",
+    coverImg: "/blog/trends-2025.jpg",
+    profileImg: "https://randomuser.me/api/portraits/women/8.jpg",
   },
   {
     id: 5,
@@ -51,8 +51,8 @@ export const blogPosts = [
     description:
       "Get creative with these simple DIY decor ideas that will refresh your home without a big investment.",
     author: "Jessica White",
-    coverImg: "/blog/blog/diy-decor.jpg",
-    profileImg: "/blog/authors/jessica.jpg",
+    coverImg: "/blog/diy-decor.jpg",
+    profileImg: "https://randomuser.me/api/portraits/women/7.jpg",
   },
   {
     id: 6,
@@ -62,7 +62,7 @@ export const blogPosts = [
     description:
       "Maximize space and style in your small living room with these smart design tricks and decor tips.",
     author: "James Anderson",
-    coverImg: "/blog/blog/small-living-room.jpg",
-    profileImg: "/blog/authors/james.jpg",
+    coverImg: "/blog/small-living-room.jpg",
+    profileImg: "https://randomuser.me/api/portraits/men/10.jpg",
   },
 ];
