@@ -68,7 +68,7 @@ const ContactForm = () => {
         }}
       />
 
-      <div className="relative flex flex-col items-center justify-center py-20 px-4">
+      <div className="relative flex flex-col items-center justify-center py-10 md:py-20 px-4">
         <div className="max-w-4xl w-full space-y-10">
           <div className="text-center mb-8">
             <h6 className="text-lg font-semibold mb-2">

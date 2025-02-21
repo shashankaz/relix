@@ -2,7 +2,7 @@ import ProductCard from "./_components/ProductCard";
 
 const Catalogue = () => {
   return (
-    <div className="flex flex-col items-center justify-center py-20">
+    <div className="flex flex-col items-center justify-center py-10 md:py-20">
       <div className="text-center mb-8">
         <h6 className="text-lg font-semibold mb-2">
           Our <span>Catalogue</span>
