@@ -62,7 +62,7 @@ const Home = () => {
               <img
                 src="/product1.jpg"
                 alt="Product 1"
-                className="h-full w-full object-cover grayscale hover:grayscale-0 transition-all duration-300"
+                className="h-full w-full object-cover md:grayscale md:hover:grayscale-0 transition-all duration-300"
               />
             </div>
           </div>
@@ -70,7 +70,7 @@ const Home = () => {
             <img
               src="/product2.jpg"
               alt="Product 2"
-              className="h-full w-full object-cover grayscale hover:grayscale-0 transition-all duration-300"
+              className="h-full w-full object-cover md:grayscale md:hover:grayscale-0 transition-all duration-300"
             />
           </div>
         </div>
@@ -79,7 +79,7 @@ const Home = () => {
             <img
               src="/product3.jpg"
               alt="Product 3"
-              className="h-full w-full object-cover grayscale hover:grayscale-0 transition-all duration-300"
+              className="h-full w-full object-cover md:grayscale md:hover:grayscale-0 transition-all duration-300"
             />
           </div>
           <div className="h-52 w-1/2 md:w-full md:h-1/2 bg-black rounded-3xl flex items-center justify-center">
