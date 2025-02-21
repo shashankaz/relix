@@ -136,7 +136,7 @@ interface OverLayProps {
 const OverLay = ({ setIsOpen }: OverLayProps) => {
   return (
     <div id="mobile-menu" className="bg-white h-screen">
-      <button className="fixed right-4 top-7" onClick={() => setIsOpen(false)}>
+      <button className="fixed right-0 top-7" onClick={() => setIsOpen(false)}>
         <X />
       </button>
       <ul className="flex flex-col gap-4 items-center justify-center h-full text-xl font-medium">
