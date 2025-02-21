@@ -17,7 +17,7 @@ const Services = () => {
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full">
         {services.map((item, index) => (
-          <Card key={index} data={item} />
+          <Card key={index} data={item} idx={index + 1} />
         ))}
       </div>
     </div>
