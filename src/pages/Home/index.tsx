@@ -88,7 +88,7 @@ const Home = () => {
           <div className="h-1/2 bg-black rounded-3xl flex items-center justify-center">
             <Link to="/catalogue">
               <ArrowUpRight
-                className="text-white size-[15vw] hover:scale-110 hover:rotate-6 transition-all duration-300"
+                className="text-white size-[15vw] hover:scale-110 transition-all duration-300"
                 strokeWidth={1}
               />
             </Link>
