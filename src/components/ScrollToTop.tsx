@@ -36,6 +36,7 @@ const ScrollToTop = () => {
         whileHover={{ scale: 1.1 }}
         initial={{ scale: 0 }}
         animate={{ scale: 1 }}
+        whileTap={{ scale: 0.9 }}
       >
         <ChevronUp />
       </motion.button>
