@@ -22,9 +22,9 @@ const MainLayout = () => {
           <Navbar />
           <Outlet />
           <Newsletter />
-          <Footer />
         </div>
       </div>
+      <Footer />
       <ScrollToTop />
     </Fragment>
   );
