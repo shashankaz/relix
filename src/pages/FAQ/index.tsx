@@ -13,7 +13,7 @@ const FAQ = () => {
   const [tab, setTab] = useState("general");
 
   return (
-    <div className="flex flex-col items-center justify-center py-10 md:py-20">
+    <div className="flex flex-col items-center justify-center py-10 md:py-20 px-4">
       <div className="text-center mb-8">
         <h6 className="text-lg font-semibold mb-2">
           FAQ<span>s</span>
