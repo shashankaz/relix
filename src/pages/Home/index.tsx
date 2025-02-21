@@ -31,19 +31,19 @@ const Home = () => {
         </p>
         <div className="lg:w-1/2 flex flex-col lg:flex-row lg:justify-between gap-2 lg:gap-0">
           <div className="flex lg:flex-col items-center justify-between lg:justify-center">
-            <h1 className="text-5xl lg:text-6xl font-medium">
+            <h1 className="text-4xl lg:text-6xl font-medium">
               88k<span>+</span>
             </h1>
             <p className="text-2xl">Happy Client</p>
           </div>
           <div className="flex lg:flex-col items-center justify-between lg:justify-center">
-            <h1 className="text-5xl lg:text-6xl font-medium">
+            <h1 className="text-4xl lg:text-6xl font-medium">
               98k<span>+</span>
             </h1>
             <p className="text-2xl">Premuim Product</p>
           </div>
           <div className="flex lg:flex-col items-center justify-between lg:justify-center">
-            <h1 className="text-5xl lg:text-6xl font-medium">
+            <h1 className="text-4xl lg:text-6xl font-medium">
               868k<span>+</span>
             </h1>
             <p className="text-2xl">Project Finished</p>
