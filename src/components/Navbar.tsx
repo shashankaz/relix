@@ -61,42 +61,36 @@ const Navbar = () => {
         </motion.h1>
         <ul className="hidden md:flex items-center gap-5">
           <motion.li
-            whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             className="font-mediu hover:cursor-pointer"
           >
             <Link to="/">Home</Link>
           </motion.li>
           <motion.li
-            whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             className="flex items-center gap-1 font-mediu hover:cursor-pointer"
           >
             <Link to="/about">About</Link>
           </motion.li>
           <motion.li
-            whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             className="flex items-center gap-1 font-mediu hover:cursor-pointer"
           >
             <Link to="/catalogue">Catalogue</Link>
           </motion.li>
           <motion.li
-            whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             className="flex items-center gap-1 font-mediu hover:cursor-pointer"
           >
             <Link to="/services">Services</Link>
           </motion.li>
           <motion.li
-            whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             className="flex items-center gap-1 font-mediu hover:cursor-pointer"
           >
             <Link to="/blog">Blog</Link>
           </motion.li>
           <motion.li
-            whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
             className="flex items-center gap-1 font-mediu hover:cursor-pointer"
           >
