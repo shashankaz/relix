@@ -52,7 +52,7 @@ const SmallCard = ({ title, imgSrc }: CardProps) => {
         alt={title}
         className="h-full w-full object-cover absolute inset-0"
       />
-      <div className="h-full w-full bg-black/20 hover:bg-transparent transition-all duration-300 absolute inset-0"></div>
+      <div className="h-full w-full bg-black/15 hover:bg-transparent transition-all duration-300 absolute inset-0"></div>
     </div>
   );
 };
@@ -75,7 +75,7 @@ const BigCard = ({ title, imgSrc }: CardProps) => {
         alt={title}
         className="h-full w-full object-cover absolute inset-0"
       />
-      <div className="h-full w-full bg-black/20 hover:bg-transparent transition-all duration-300 absolute inset-0"></div>
+      <div className="h-full w-full bg-black/15 hover:bg-transparent transition-all duration-300 absolute inset-0"></div>
     </div>
   );
 };
