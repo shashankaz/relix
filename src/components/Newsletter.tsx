@@ -12,7 +12,7 @@ const Newsletter = () => {
           Stay up to date with the latest news, announcements, and articles.
         </p>
       </div>
-      <div className="flex bg-white p-1 rounded-lg border w-full md:w-fit">
+      <div className="flex gap-1 bg-white p-1 rounded-lg border w-full md:w-fit">
         <Input
           placeholder="Enter your email"
           className="border-none shadow-none outline-none w-full md:w-80 ring-0"
