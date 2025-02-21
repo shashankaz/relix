@@ -15,6 +15,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { MessagesSquare, PhoneCall, Send, Twitter } from "lucide-react";
+import { toast } from "react-toastify";
 
 const items = [
   { id: "residential-design", label: "Residential Design" },
@@ -56,6 +57,8 @@ const ContactForm = () => {
   const onSubmit = (values: z.infer<typeof formSchema>) => {
     form.reset();
     console.log(values);
+
+    toast.success("Message sent successfully!");
   };
 
   return (
