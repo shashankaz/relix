@@ -3,13 +3,13 @@ import { ArrowUpRight } from "lucide-react";
 
 const Collections = () => {
   return (
-    <div className="py-20">
+    <div className="pt-20 pb-10">
       <div>
-        <h1 className="text-6xl font-medium capitalize w-1/2">
+        <h1 className="text-4xl md:text-6xl font-medium capitalize md:w-1/2">
           Explore our proudly work
         </h1>
       </div>
-      <div className="grid grid-cols-3 h-screen gap-6 mt-16">
+      <div className="grid grid-cols-1 md:grid-cols-3 min-h-screen gap-6 mt-8 md:mt-16">
         <div className="flex flex-col gap-6">
           <SmallCard title="Timeless Aesthetics" imgSrc="/products/1.jpg" />
           <BigCard title="Curated Elegance" imgSrc="/products/2.jpg" />
@@ -36,7 +36,7 @@ interface CardProps {
 
 const SmallCard = ({ title, imgSrc }: CardProps) => {
   return (
-    <div className="h-1/3 bg-black p-5 rounded-3xl overflow-hidden flex flex-col justify-end relative">
+    <div className="h-60 md:h-1/3 bg-black p-5 rounded-3xl overflow-hidden flex flex-col justify-end relative">
       <div className="flex justify-between z-10">
         <h1 className="text-2xl text-white">{title}</h1>
         <motion.div
@@ -59,7 +59,7 @@ const SmallCard = ({ title, imgSrc }: CardProps) => {
 
 const BigCard = ({ title, imgSrc }: CardProps) => {
   return (
-    <div className="h-2/3 bg-black p-5 rounded-3xl overflow-hidden flex flex-col justify-end relative">
+    <div className="h-60 md:h-2/3 bg-black p-5 rounded-3xl overflow-hidden flex flex-col justify-end relative">
       <div className="flex justify-between z-10">
         <h1 className="text-2xl text-white">{title}</h1>
         <motion.div
