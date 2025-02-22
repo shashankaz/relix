@@ -14,6 +14,7 @@ import { Link, useLocation } from "react-router";
 import { Button } from "./ui/button";
 import { useGSAP } from "@gsap/react";
 import { AnimatePresence, motion } from "motion/react";
+import { cn } from "@/lib/utils";
 // import gsap from "gsap";
 
 const Navbar = () => {
@@ -63,9 +64,13 @@ const Navbar = () => {
 
   return (
     <div
-      className={`h-20 backdrop-blur-sm bg-white/50 sticky top-0 left-0 right-0 transition-transform ${
-        showNavbar ? "translate-y-0" : "-translate-y-full"
-      } flex items-center justify-between z-10`}
+      className={cn(
+        "h-20 backdrop-blur-sm bg-white/50 flex items-center justify-between z-10",
+        !isOpen
+          ? "sticky top-0 left-0 right-0 transition-transform"
+          : "fixed inset-0 z-[9999]",
+        showNavbar && !isOpen ? "translate-y-0" : "-translate-y-full"
+      )}
     >
       <div className="flex items-center gap-8">
         <Link to="/">
@@ -165,14 +170,14 @@ interface OverLayProps {
 
 const OverLay = ({ setIsOpen, location }: OverLayProps) => {
   return (
-    <div id="mobile-menu" className="bg-white h-screen">
+    <div id="mobile-menu" className="bg-white h-screen mt-20">
       <button
-        className="fixed right-0 top-7 bg-black text-white p-2"
+        className="fixed right-3 top-[6.5rem] bg-black text-white p-2 rounded-full"
         onClick={() => setIsOpen(false)}
       >
         <X className="size-4" />
       </button>
-      <ul className="flex flex-col gap-4 justify-center h-full text-xl font-medium px-4">
+      <ul className="flex flex-col gap-4 justify-center h-full text-xl font-medium px-10">
         <li
           className={`flex items-center flex-row-reverse justify-end gap-2 ${
             location !== "/" ? "text-gray-400" : ""
