@@ -25,9 +25,9 @@ const Home = () => {
       </h1>
       <div className="flex flex-col lg:flex-row justify-between gap-10">
         <p className="lg:w-1/2 text-start leading-relaxed text-gray-600">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum earum
-          quaerat blanditiis quam deleniti quas dolore delectus maiores aliquam
-          architecto!
+          Transforming spaces with elegance and functionality. Explore our
+          services, get inspired by our blog, and connect with us to create your
+          dream interiors.
         </p>
         <div className="lg:w-1/2 flex flex-col lg:flex-row lg:justify-between gap-2 lg:gap-0">
           <div className="flex lg:flex-col items-center justify-between lg:justify-center">
