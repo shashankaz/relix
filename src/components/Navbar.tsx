@@ -1,6 +1,16 @@
 import { useState, useEffect } from "react";
-import { Equal, X } from "lucide-react";
-import { Link } from "react-router";
+import {
+  Cog,
+  Equal,
+  FileQuestion,
+  Grid,
+  Home,
+  MessageCircle,
+  Notebook,
+  Phone,
+  X,
+} from "lucide-react";
+import { Link, useLocation } from "react-router";
 import { Button } from "./ui/button";
 import { useGSAP } from "@gsap/react";
 import { AnimatePresence, motion } from "motion/react";
@@ -10,6 +20,8 @@ const Navbar = () => {
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isOpen, setIsOpen] = useState(false);
+
+  const location = useLocation();
 
   const handleScroll = () => {
     if (typeof window !== "undefined") {
@@ -56,54 +68,71 @@ const Navbar = () => {
       } flex items-center justify-between z-10`}
     >
       <div className="flex items-center gap-8">
-        <motion.h1 whileTap={{ scale: 0.9 }} className="text-2xl font-bold font-comfortaa">
-          <Link to="/">Relix</Link>
-        </motion.h1>
+        <Link to="/">
+          <motion.h1
+            whileTap={{ scale: 0.9 }}
+            className="text-2xl font-bold font-comfortaa"
+          >
+            Relix
+          </motion.h1>
+        </Link>
         <ul className="hidden md:flex items-center gap-5">
-          <motion.li
-            whileTap={{ scale: 0.9 }}
-            className="font-mediu hover:cursor-pointer"
-          >
-            <Link to="/">Home</Link>
-          </motion.li>
-          <motion.li
-            whileTap={{ scale: 0.9 }}
-            className="flex items-center gap-1 font-mediu hover:cursor-pointer"
-          >
-            <Link to="/about">About</Link>
-          </motion.li>
-          <motion.li
-            whileTap={{ scale: 0.9 }}
-            className="flex items-center gap-1 font-mediu hover:cursor-pointer"
-          >
-            <Link to="/catalogue">Catalogue</Link>
-          </motion.li>
-          <motion.li
-            whileTap={{ scale: 0.9 }}
-            className="flex items-center gap-1 font-mediu hover:cursor-pointer"
-          >
-            <Link to="/services">Services</Link>
-          </motion.li>
-          <motion.li
-            whileTap={{ scale: 0.9 }}
-            className="flex items-center gap-1 font-mediu hover:cursor-pointer"
-          >
-            <Link to="/blog">Blog</Link>
-          </motion.li>
-          <motion.li
-            whileTap={{ scale: 0.9 }}
-            className="flex items-center gap-1 font-mediu hover:cursor-pointer"
-          >
-            <Link to="/faq">FAQ</Link>
-          </motion.li>
+          <Link to="/">
+            <motion.li
+              whileTap={{ scale: 0.9 }}
+              className="font-mediu hover:cursor-pointer"
+            >
+              Home
+            </motion.li>
+          </Link>
+          <Link to="/about">
+            <motion.li
+              whileTap={{ scale: 0.9 }}
+              className="flex items-center gap-1 font-mediu hover:cursor-pointer"
+            >
+              About
+            </motion.li>
+          </Link>
+          <Link to="/catalogue">
+            <motion.li
+              whileTap={{ scale: 0.9 }}
+              className="flex items-center gap-1 font-mediu hover:cursor-pointer"
+            >
+              Catalogue
+            </motion.li>
+          </Link>
+          <Link to="/services">
+            <motion.li
+              whileTap={{ scale: 0.9 }}
+              className="flex items-center gap-1 font-mediu hover:cursor-pointer"
+            >
+              Services
+            </motion.li>
+          </Link>
+          <Link to="/blog">
+            <motion.li
+              whileTap={{ scale: 0.9 }}
+              className="flex items-center gap-1 font-mediu hover:cursor-pointer"
+            >
+              Blog
+            </motion.li>
+          </Link>
+          <Link to="/faq">
+            <motion.li
+              whileTap={{ scale: 0.9 }}
+              className="flex items-center gap-1 font-mediu hover:cursor-pointer"
+            >
+              FAQ
+            </motion.li>
+          </Link>
         </ul>
       </div>
       <div className="hidden md:flex gap-3">
-        <Button>
-          <motion.div whileTap={{ scale: 0.9 }}>
-            <Link to="/contact">Contact</Link>
-          </motion.div>
-        </Button>
+        <Link to="/contact">
+          <Button>
+            <motion.div whileTap={{ scale: 0.9 }}>Contact</motion.div>
+          </Button>
+        </Link>
       </div>
       <div className="flex md:hidden">
         <motion.button whileTap={{ y: -2 }} onClick={() => setIsOpen(true)}>
@@ -119,7 +148,7 @@ const Navbar = () => {
             exit={{ opacity: 0, scale: 0 }}
             key="box"
           >
-            <OverLay setIsOpen={setIsOpen} />
+            <OverLay setIsOpen={setIsOpen} location={location.pathname} />
           </motion.div>
         )}
       </AnimatePresence>
@@ -131,49 +160,102 @@ export default Navbar;
 
 interface OverLayProps {
   setIsOpen: (isOpen: boolean) => void;
+  location: string;
 }
 
-const OverLay = ({ setIsOpen }: OverLayProps) => {
+const OverLay = ({ setIsOpen, location }: OverLayProps) => {
   return (
     <div id="mobile-menu" className="bg-white h-screen">
-      <button className="fixed right-0 top-7" onClick={() => setIsOpen(false)}>
-        <X />
+      <button
+        className="fixed right-0 top-7 bg-black text-white p-2"
+        onClick={() => setIsOpen(false)}
+      >
+        <X className="size-4" />
       </button>
-      <ul className="flex flex-col gap-4 items-center justify-center h-full text-xl font-medium">
-        <li>
+      <ul className="flex flex-col gap-4 justify-center h-full text-xl font-medium px-4">
+        <li
+          className={`flex items-center flex-row-reverse justify-end gap-2 ${
+            location !== "/" ? "text-gray-400" : ""
+          }`}
+        >
           <Link onClick={() => setIsOpen(false)} to="/">
             Home
           </Link>
+          <span>
+            <Home />
+          </span>
         </li>
-        <li className="flex items-center gap-1">
+        <li
+          className={`flex items-center flex-row-reverse justify-end gap-2 ${
+            location !== "/about" ? "text-gray-400" : ""
+          }`}
+        >
           <Link onClick={() => setIsOpen(false)} to="/about">
             About
           </Link>
+          <span>
+            <MessageCircle />
+          </span>
         </li>
-        <li className="flex items-center gap-1">
+        <li
+          className={`flex items-center flex-row-reverse justify-end gap-2 ${
+            location !== "/catalogue" ? "text-gray-400" : ""
+          }`}
+        >
           <Link onClick={() => setIsOpen(false)} to="/catalogue">
             Catalogue
           </Link>
+          <span>
+            <Grid />
+          </span>
         </li>
-        <li className="flex items-center gap-1">
+        <li
+          className={`flex items-center flex-row-reverse justify-end gap-2 ${
+            location !== "/services" ? "text-gray-400" : ""
+          }`}
+        >
           <Link onClick={() => setIsOpen(false)} to="/services">
             Services
           </Link>
+          <span>
+            <Cog />
+          </span>
         </li>
-        <li className="flex items-center gap-1">
+        <li
+          className={`flex items-center flex-row-reverse justify-end gap-2 ${
+            location !== "/blog" ? "text-gray-400" : ""
+          }`}
+        >
           <Link onClick={() => setIsOpen(false)} to="/blog">
             Blog
           </Link>
+          <span>
+            <Notebook />
+          </span>
         </li>
-        <li className="flex items-center gap-1">
+        <li
+          className={`flex items-center flex-row-reverse justify-end gap-2 ${
+            location !== "/faq" ? "text-gray-400" : ""
+          }`}
+        >
           <Link onClick={() => setIsOpen(false)} to="/faq">
             FAQ
           </Link>
+          <span>
+            <FileQuestion />
+          </span>
         </li>
-        <li className="flex items-center gap-1">
+        <li
+          className={`flex items-center flex-row-reverse justify-end gap-2 ${
+            location !== "/contact" ? "text-gray-400" : ""
+          }`}
+        >
           <Link onClick={() => setIsOpen(false)} to="/contact">
             Contact
           </Link>
+          <span>
+            <Phone />
+          </span>
         </li>
       </ul>
     </div>
