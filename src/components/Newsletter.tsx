@@ -28,12 +28,12 @@ const Newsletter = () => {
   };
 
   return (
-    <div className="bg-primary text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 my-10">
+    <div className="bg-slate-700 text-white p-6 md:p-10 rounded-2xl flex flex-col md:flex-row items-center justify-between gap-6 my-10">
       <div>
         <h1 className="text-2xl md:text-3xl font-semibold font-montserrat mb-3">
           Join our weekly newsletter
         </h1>
-        <p>
+        <p className="text-sm sm:text-base">
           Stay up to date with the latest news, announcements, and articles.
         </p>
       </div>
@@ -43,7 +43,7 @@ const Newsletter = () => {
       >
         <Input
           placeholder="Enter your email"
-          className="border-none shadow-none outline-none w-full md:w-80 ring-0 text-black"
+          className="border-none shadow-none outline-none w-full md:w-80 ring-0 text-black text-sm"
           type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
@@ -53,7 +53,9 @@ const Newsletter = () => {
             }
           }}
         />
-        <Button type="submit">Subscribe</Button>
+        <Button type="submit" className="bg-slate-700 hover:bg-slate-600">
+          Subscribe
+        </Button>
       </form>
     </div>
   );
