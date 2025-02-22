@@ -3,10 +3,11 @@ import { BrowserRouter, Route, Routes } from "react-router";
 
 import MainLayout from "@/layout/MainLayout.tsx";
 import { Toaster } from "@/components/ui/toaster";
+import Catalogue from "@/pages/Catalogue";
 
 const Home = lazy(() => import("@/pages/Home"));
 const About = lazy(() => import("@/pages/About"));
-const Catalogue = lazy(() => import("@/pages/Catalogue"));
+// const Catalogue = lazy(() => import("@/pages/Catalogue"));
 const Services = lazy(() => import("@/pages/Services"));
 const Blog = lazy(() => import("@/pages/Blog"));
 const FAQ = lazy(() => import("@/pages/FAQ"));
