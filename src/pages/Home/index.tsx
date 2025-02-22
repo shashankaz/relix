@@ -53,12 +53,12 @@ const Home = () => {
       <div className="flex flex-col md:flex-row justify-between md:h-[70vh] mt-8 gap-2">
         <div className="md:w-4/5 h-full rounded-3xl flex flex-col md:flex-row gap-2">
           <div className="md:w-1/4 h-full flex flex-row md:flex-col gap-2">
-            <div className="w-full h-52 md:h-1/2 bg-black rounded-3xl grid place-content-center">
+            <div className="w-full h-48 md:h-1/2 bg-black rounded-3xl grid place-content-center">
               <h4 className="text-white text-3xl md:text-4xl font-extralight text-center">
                 Style. <br /> Elegance. <br /> Space.
               </h4>
             </div>
-            <div className="w-full h-52 md:h-1/2 bg-black rounded-3xl overflow-hidden">
+            <div className="w-full h-48 md:h-1/2 bg-black rounded-3xl overflow-hidden">
               <img
                 src="/product1.jpg"
                 alt="Product 1"
@@ -66,7 +66,7 @@ const Home = () => {
               />
             </div>
           </div>
-          <div className="md:w-3/4 h-52 md:h-full bg-black overflow-hidden rounded-3xl">
+          <div className="md:w-3/4 h-48 md:h-full bg-black overflow-hidden rounded-3xl">
             <img
               src="/product2.jpg"
               alt="Product 2"
@@ -75,17 +75,17 @@ const Home = () => {
           </div>
         </div>
         <div className="md:w-1/5 h-full flex flex-row md:flex-col gap-2">
-          <div className="h-52 w-1/2 md:w-full md:h-1/2 bg-black overflow-hidden rounded-3xl">
+          <div className="h-48 w-1/2 md:w-full md:h-1/2 bg-black overflow-hidden rounded-3xl">
             <img
               src="/product3.jpg"
               alt="Product 3"
               className="h-full w-full object-cover md:grayscale md:hover:grayscale-0 transition-all duration-300"
             />
           </div>
-          <div className="h-52 w-1/2 md:w-full md:h-1/2 bg-black rounded-3xl flex items-center justify-center">
+          <div className="h-48 w-1/2 md:w-full md:h-1/2 bg-black rounded-3xl flex items-center justify-center">
             <Link to="/catalogue">
               <ArrowUpRight
-                className="text-white size-[15vw] hover:scale-110 transition-all duration-300"
+                className="text-white size-[10rem] md:size-[13rem] hover:scale-110 transition-all duration-300"
                 strokeWidth={1}
               />
             </Link>
