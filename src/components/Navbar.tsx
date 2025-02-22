@@ -57,7 +57,7 @@ const Navbar = () => {
     >
       <div className="flex items-center gap-8">
         <motion.h1 whileTap={{ scale: 0.9 }} className="text-2xl font-bold font-comfortaa">
-          <Link to="/">Reactify UI</Link>
+          <Link to="/">Relix</Link>
         </motion.h1>
         <ul className="hidden md:flex items-center gap-5">
           <motion.li

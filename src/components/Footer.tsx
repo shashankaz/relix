@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="z-10 bg-white rounded-xl px-6 max-w-7xl mx-auto">
         <div className="flex flex-col lg:flex-row gap-10 pb-16 pt-8 border-b">
           <div className="w-full lg:w-2/6">
-            <h1 className="text-3xl font-bold font-comfortaa">Reactify UI</h1>
+            <h1 className="text-3xl font-bold font-comfortaa">Relix</h1>
             <p className="mt-3">
               Transforming spaces with elegance and functionality. Explore our
               services, get inspired by our blog, and connect with us to create
@@ -142,7 +142,7 @@ const Footer = () => {
         </div>
         <div className="min-h-20 py-4 flex flex-col sm:flex-row items-center justify-between">
           <p className="text-gray-400 text-sm font-light text-center sm:text-left">
-            &copy;2025 Reactify UI. All rights reserved.
+            &copy;2025 Relix. All rights reserved.
           </p>
           <div className="flex gap-3 mt-4 sm:mt-0">
             <motion.div whileHover={{ y: -3 }}>
