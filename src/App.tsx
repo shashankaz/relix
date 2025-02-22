@@ -10,6 +10,7 @@ const About = lazy(() => import("@/pages/About"));
 // const Catalogue = lazy(() => import("@/pages/Catalogue"));
 const Services = lazy(() => import("@/pages/Services"));
 const Blog = lazy(() => import("@/pages/Blog"));
+const BlogPage = lazy(() => import("@/pages/BlogPage"));
 const FAQ = lazy(() => import("@/pages/FAQ"));
 const Contact = lazy(() => import("@/pages/Contact"));
 const NotFound = lazy(() => import("@/pages/NotFound"));
@@ -25,6 +26,7 @@ const App = () => {
             <Route path="/catalogue" element={<Catalogue />} />
             <Route path="/services" element={<Services />} />
             <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/:slug" element={<BlogPage />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/*" element={<NotFound />} />
