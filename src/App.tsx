@@ -11,6 +11,7 @@ const Services = lazy(() => import("@/pages/Services"));
 const Blog = lazy(() => import("@/pages/Blog"));
 const FAQ = lazy(() => import("@/pages/FAQ"));
 const Contact = lazy(() => import("@/pages/Contact"));
+const NotFound = lazy(() => import("@/pages/NotFound"));
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
             <Route path="/blog" element={<Blog />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/*" element={<NotFound />} />
           </Route>
         </Routes>
         <Toaster />
