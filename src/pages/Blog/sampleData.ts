@@ -9,6 +9,7 @@ export const blogPosts = [
     author: "Daniel Roberts",
     coverImg: "/blog/home-office.jpg",
     profileImg: "https://randomuser.me/api/portraits/men/12.jpg",
+    slug: "designing-a-productive-home-office"
   },
   {
     id: 2,
@@ -20,6 +21,7 @@ export const blogPosts = [
     author: "Emily Davis",
     coverImg: "/blog/luxury-bedroom.jpg",
     profileImg: "https://randomuser.me/api/portraits/women/9.jpg",
+    slug: "creating-a-luxurious-bedroom-on-a-budget"
   },
   {
     id: 3,
@@ -31,6 +33,7 @@ export const blogPosts = [
     author: "Michael Green",
     coverImg: "/blog/color-psychology.jpg",
     profileImg: "https://randomuser.me/api/portraits/men/13.jpg",
+    slug: "choosing-the-right-colors-for-your-home"
   },
   {
     id: 4,
@@ -42,6 +45,7 @@ export const blogPosts = [
     author: "Sophia Carter",
     coverImg: "/blog/trends-2025.jpg",
     profileImg: "https://randomuser.me/api/portraits/women/8.jpg",
+    slug: "top-interior-design-trends-for-2025"
   },
   {
     id: 5,
@@ -53,6 +57,7 @@ export const blogPosts = [
     author: "Jessica White",
     coverImg: "/blog/diy-decor.jpg",
     profileImg: "https://randomuser.me/api/portraits/women/7.jpg",
+    slug: "5-easy-diy-decor-ideas-for-your-home"
   },
   {
     id: 6,
@@ -64,5 +69,6 @@ export const blogPosts = [
     author: "James Anderson",
     coverImg: "/blog/small-living-room.jpg",
     profileImg: "https://randomuser.me/api/portraits/men/10.jpg",
+    slug: "how-to-style-a-small-living-room"
   },
 ];

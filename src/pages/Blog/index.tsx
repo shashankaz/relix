@@ -27,6 +27,7 @@ const Blog = () => {
             author={post.author}
             coverImg={post.coverImg}
             profileImg={post.profileImg}
+            slug={post.slug}
           />
         ))}
       </div>
