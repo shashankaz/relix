@@ -8,7 +8,10 @@ const Services = () => {
         <h6 className="text-lg font-semibold mb-2">
           Our <span>Services</span>
         </h6>
-        <h1 className="text-4xl md:text-5xl font-semibold font-playwrite">
+        <h1
+          className="text-4xl md:text-5xl font-semibold font-playwrite"
+          style={{ lineHeight: "1.4" }}
+        >
           Transforming Spaces with Style
         </h1>
         <p className="md:text-lg text-muted-foreground mt-4">
