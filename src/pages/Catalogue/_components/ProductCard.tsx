@@ -1,14 +1,25 @@
-const ProductCard = ({ idx }: { idx: number }) => {
+import { useEffect, useState } from "react";
+import { cn } from "@/lib/utils";
+
+interface ProductCardProps {
+  src: string;
+  alt: string;
+}
+
+const ProductCard = ({ src, alt }: ProductCardProps) => {
+  const heights = ["h-96", "h-80", "h-72", "h-64", "h-56"];
+  const [height, setHeight] = useState(heights[0]);
+
+  useEffect(() => {
+    const randomHeight = heights[Math.floor(Math.random() * heights.length)];
+    setHeight(randomHeight);
+  }, []);
+
   return (
-    <div className="h-60 md:h-80 lg:h-96 w-full border-4 border-black">
-      <div className="h-full w-full relative">
-        <img
-          src={`/catalogue/image (${idx}).jpg`}
-          alt={`Product ${idx}`}
-          className="h-full w-full object-cover md:grayscale md:hover:grayscale-0 transition-all duration-300"
-        />
-        <div className="absolute inset-0 bg-gray-300 animate-pulse -z-10"></div>
-      </div>
+    <div
+      className={cn(height, "w-full rounded-xl overflow-hidden bg-gray-300")}
+    >
+      <img src={src} alt={alt} className="h-full w-full object-cover" />
     </div>
   );
 };
