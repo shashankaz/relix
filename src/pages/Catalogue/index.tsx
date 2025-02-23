@@ -24,7 +24,7 @@ const Catalogue = () => {
             params: {
               query: "interior design",
               count: 50,
-              client_id: "eK8QNmGK4t7NJI_Evp5YZDpw89L52c_YVZNr5B4cjqY",
+              client_id: import.meta.env.VITE_UNSPLASH_CLIENT_ID,
             },
           }
         );
