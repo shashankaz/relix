@@ -17,7 +17,7 @@ const ProductCard = ({ src, alt }: ProductCardProps) => {
 
   return (
     <div
-      className={cn(height, "w-full rounded-2xl overflow-hidden bg-gray-300")}
+      className={cn(height, "w-full rounded-2xl overflow-hidden bg-gray-200")}
     >
       <img src={src} alt={alt} className="h-full w-full object-cover" />
     </div>
