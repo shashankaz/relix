@@ -7,7 +7,7 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ src, alt }: ProductCardProps) => {
-  const heights = ["h-96", "h-80", "h-72", "h-64", "h-56"];
+  const heights = ["h-96", "h-80", "h-72", "h-64", "h-60", "h-56", "h-52"];
   const [height, setHeight] = useState(heights[0]);
 
   useEffect(() => {
@@ -17,7 +17,7 @@ const ProductCard = ({ src, alt }: ProductCardProps) => {
 
   return (
     <div
-      className={cn(height, "w-full rounded-xl overflow-hidden bg-gray-300")}
+      className={cn(height, "w-full rounded-2xl overflow-hidden bg-gray-300")}
     >
       <img src={src} alt={alt} className="h-full w-full object-cover" />
     </div>
