@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import axios from "axios";
 
 import ProductCard from "./_components/ProductCard";
@@ -40,6 +40,8 @@ const Catalogue = () => {
     fetchImages();
   }, []);
 
+  const memoizedImages = useMemo(() => images, [images]);
+
   return (
     <div className="flex flex-col items-center justify-center py-10 md:py-20">
       <div className="text-center mb-8">
@@ -62,7 +64,7 @@ const Catalogue = () => {
           <p className="text-center text-2xl font-medium mt-10">Loading...</p>
         ) : (
           <div className="columns-2 md:columns-3 lg:columns-4 gap-5 w-full space-y-5">
-            {images.map((image) => (
+            {memoizedImages.map((image) => (
               <ProductCard
                 key={image.id}
                 src={image.urls.regular}
