@@ -63,7 +63,7 @@ const Catalogue = () => {
         {loading ? (
           <p className="text-center text-2xl font-medium mt-10">Loading...</p>
         ) : (
-          <div className="columns-2 md:columns-3 lg:columns-4 gap-5 w-full space-y-5">
+          <div className="columns-2 md:columns-3 lg:columns-4 gap-3 md:gap-5 w-full space-y-3 md:space-y-5">
             {memoizedImages.map((image) => (
               <ProductCard
                 key={image.id}
