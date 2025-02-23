@@ -59,9 +59,15 @@ const Catalogue = () => {
           space.
         </p>
       </div>
-      <div>
+      <div className="min-h-screen">
         {loading ? (
-          <p className="text-center text-2xl font-medium mt-10">Loading...</p>
+          <p className="text-center mt-16 md:mt-20">
+            <img
+              src="/loading.svg"
+              alt="Loading"
+              className="size-16 md:size-20"
+            />
+          </p>
         ) : (
           <div className="columns-2 md:columns-3 lg:columns-4 gap-3 md:gap-5 w-full space-y-3 md:space-y-5">
             {memoizedImages.map((image) => (
