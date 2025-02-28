@@ -3,11 +3,12 @@ import { toast } from "react-toastify";
 
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
+import axios, { AxiosError } from "axios";
 
 const Newsletter = () => {
   const [email, setEmail] = useState("");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!email) {
@@ -22,9 +23,31 @@ const Newsletter = () => {
       return;
     }
 
-    console.log(email);
-    toast.success("Subscribed successfully!");
-    setEmail("");
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_BACKEND_URL}newsletter/subscribe`,
+        {
+          email: email,
+          src: "Relix ltd",
+        }
+      );
+
+      if (response.status === 201) {
+        toast.success(response.data.message);
+        setEmail("");
+      }
+    } catch (error: unknown) {
+      console.error(error);
+      if (error instanceof AxiosError) {
+        if (error.response?.status === 400) {
+          toast.error(error.response.data.message);
+        } else if (error.response?.status === 500) {
+          toast.error("Something went wrong. Please try again later.");
+        }
+      } else {
+        toast.error("An unknown error occurred. Please try again.");
+      }
+    }
   };
 
   return (
