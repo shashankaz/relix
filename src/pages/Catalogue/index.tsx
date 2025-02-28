@@ -23,7 +23,7 @@ const Catalogue = () => {
           {
             params: {
               query: "interior design",
-              count: 50,
+              count: 30,
               client_id: import.meta.env.VITE_UNSPLASH_CLIENT_ID,
             },
           }
