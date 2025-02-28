@@ -1,7 +1,15 @@
+import { useEffect } from "react";
 import Card from "./_components/Card";
 import { services } from "./sampleData";
 
 const Services = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
   return (
     <div className="flex flex-col items-center justify-center py-10 md:py-20">
       <div className="text-center mb-8">

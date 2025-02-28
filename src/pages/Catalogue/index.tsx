@@ -40,6 +40,13 @@ const Catalogue = () => {
     fetchImages();
   }, []);
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
   const memoizedImages = useMemo(() => images, [images]);
 
   return (

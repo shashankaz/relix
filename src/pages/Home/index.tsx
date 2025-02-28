@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router";
 
@@ -7,6 +8,13 @@ import Services from "./_components/Services";
 import Testimonials from "./_components/Testimonials";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
   return (
     <div>
       <h1 className="text-[12vw] flex md:justify-between font-semibold uppercase">

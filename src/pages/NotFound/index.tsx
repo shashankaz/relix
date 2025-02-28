@@ -1,7 +1,15 @@
+import { useEffect } from "react";
 import { Link } from "react-router";
 import { Button } from "@/components/ui/button";
 
 const NotFound = () => {
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
   return (
     <div className="h-[80vh] flex flex-col items-center justify-center">
       <h1 className="text-[150px] sm:text-[200px] drop-shadow-[3px_3px_6px_gray]">

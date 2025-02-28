@@ -26,6 +26,13 @@ const BlogPage = () => {
     fetchData();
   }, [pathname.slug]);
 
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+
   return (
     <div className="flex flex-col items-center justify-center py-10 md:py-20">
       <div className="mb-8 max-w-2xl mx-auto">

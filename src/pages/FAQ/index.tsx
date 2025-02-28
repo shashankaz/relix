@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -11,6 +11,13 @@ import { servicesFAQs } from "./servicesFAQs";
 
 const FAQ = () => {
   const [tab, setTab] = useState("general");
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 
   return (
     <div className="flex flex-col items-center justify-center py-10 md:py-20 px-4">

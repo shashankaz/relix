@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
 
+import { useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { MessagesSquare, PhoneCall, Send, Twitter } from "lucide-react";
@@ -60,6 +61,13 @@ const ContactForm = () => {
 
     toast.success("Message sent successfully!");
   };
+
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
 
   return (
     <div className="relative overflow-hidden bg-background">
