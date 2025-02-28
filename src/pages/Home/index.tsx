@@ -1,11 +1,13 @@
 import { useEffect } from "react";
 import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router";
+import { motion } from "motion/react";
 
 import Collections from "./_components/Collections";
 import Announcement from "./_components/Announcement";
 import Services from "./_components/Services";
 import Testimonials from "./_components/Testimonials";
+import { Button } from "@/components/ui/button";
 
 const Home = () => {
   useEffect(() => {
@@ -16,47 +18,45 @@ const Home = () => {
   });
 
   return (
-    <div>
-      <h1 className="text-[12vw] flex md:justify-between font-semibold uppercase">
-        <span>S</span>
-        <span>A</span>
-        <span>T</span>
-        <span>I</span>
-        <span>S</span>
-        <span>F</span>
-        <span>A</span>
-        <span>C</span>
-        <span>T</span>
-        <span>I</span>
-        <span>O</span>
-        <span>N</span>
+    <div className="md:pt-10">
+      <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold uppercase w-fit">
+        Inspired Living
       </h1>
-      <div className="flex flex-col lg:flex-row justify-between gap-10">
-        <p className="lg:w-1/2 text-start leading-relaxed text-gray-600">
-          Transforming spaces with elegance and functionality. Explore our
-          services, get inspired by our blog, and connect with us to create your
-          dream interiors.
+      <div className="flex flex-col lg:flex-row justify-between gap-8 mt-6">
+        <p className="lg:w-1/2 text-lg md:text-xl text-gray-700 leading-relaxed">
+          Transform your spaces with elegance and functionality. Explore our
+          services, get inspired by our designs, and create your dream interiors
+          today!
         </p>
-        <div className="lg:w-1/2 flex flex-col lg:flex-row lg:justify-between gap-2 lg:gap-0">
-          <div className="flex lg:flex-col items-center justify-between lg:justify-center">
-            <h1 className="text-4xl lg:text-6xl font-medium">
-              88k<span>+</span>
-            </h1>
-            <p className="text-2xl">Happy Client</p>
-          </div>
-          <div className="flex lg:flex-col items-center justify-between lg:justify-center">
-            <h1 className="text-4xl lg:text-6xl font-medium">
-              98k<span>+</span>
-            </h1>
-            <p className="text-2xl">Premuim Product</p>
-          </div>
-          <div className="flex lg:flex-col items-center justify-between lg:justify-center">
-            <h1 className="text-4xl lg:text-6xl font-medium">
-              868k<span>+</span>
-            </h1>
-            <p className="text-2xl">Project Finished</p>
-          </div>
+        <div className="flex items-center gap-4">
+          <Link to="/contact">
+            <Button>
+              <motion.div whileTap={{ scale: 0.9 }}>Get Started</motion.div>
+            </Button>
+          </Link>
+          <Link to="/catalogue">
+            <Button variant="outline">
+              <motion.div whileTap={{ scale: 0.9 }}>View Catalogue</motion.div>
+            </Button>
+          </Link>
         </div>
+      </div>
+      <div className="my-10 md:my-14 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
+        {[
+          { number: "88k+", label: "Happy Clients" },
+          { number: "98k+", label: "Premium Products" },
+          { number: "868k+", label: "Projects Completed" },
+          { number: "150k+", label: "Design Consultations" },
+        ].map((stat, index) => (
+          <div key={index} className="flex flex-col items-center">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-semibold">
+              {stat.number}
+            </h2>
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600">
+              {stat.label}
+            </p>
+          </div>
+        ))}
       </div>
       <div className="flex flex-col md:flex-row justify-between md:h-[70vh] mt-8 gap-2">
         <div className="md:w-4/5 h-full rounded-3xl flex flex-col md:flex-row gap-2">
