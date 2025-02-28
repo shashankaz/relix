@@ -226,7 +226,9 @@ const OverLay = ({ setIsOpen, location }: OverLayProps) => {
         </li>
         <li
           className={`flex items-center flex-row-reverse justify-end gap-2 ${
-            location !== "/blog" ? "text-gray-400" : ""
+            !(location === "/blog" || location.startsWith("/blog/"))
+              ? "text-gray-400"
+              : ""
           }`}
         >
           <Link onClick={() => setIsOpen(false)} to="/blog">
