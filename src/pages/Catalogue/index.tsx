@@ -71,11 +71,7 @@ const Catalogue = () => {
         ) : (
           <div className="columns-2 md:columns-3 lg:columns-4 gap-3 md:gap-5 w-full space-y-3 md:space-y-5">
             {memoizedImages.map((image) => (
-              <ProductCard
-                key={image.id}
-                src={image.urls.regular}
-                alt={image.alt_description}
-              />
+              <ProductCard key={image.id} src={image.urls.regular} />
             ))}
           </div>
         )}
