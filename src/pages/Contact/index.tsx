@@ -17,6 +17,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { MessagesSquare, PhoneCall, Send, Twitter } from "lucide-react";
 import { toast } from "react-toastify";
+import axios, { AxiosError } from "axios";
 
 const items = [
   { id: "residential-design", label: "Residential Design" },
@@ -55,11 +56,37 @@ const ContactForm = () => {
     },
   });
 
-  const onSubmit = (values: z.infer<typeof formSchema>) => {
-    form.reset();
-    console.log(values);
+  const onSubmit = async (values: z.infer<typeof formSchema>) => {
+    try {
+      const response = await axios.post(
+        `${import.meta.env.VITE_BACKEND_URL}contact/new-contact`,
+        {
+          firstName: values.firstName,
+          lastName: values.lastName,
+          email: values.email,
+          phoneNumber: values.phoneNumber,
+          message: values.message,
+          services: values.services,
+          src: "Relix ltd",
+        }
+      );
 
-    toast.success("Message sent successfully!");
+      if (response.status === 201) {
+        toast.success(response.data.message);
+        form.reset();
+      }
+    } catch (error: unknown) {
+      console.error(error);
+      if (error instanceof AxiosError) {
+        if (error.response?.status === 400) {
+          toast.error(error.response.data.message);
+        } else if (error.response?.status === 500) {
+          toast.error("Something went wrong. Please try again later.");
+        }
+      } else {
+        toast.error("An unknown error occurred. Please try again.");
+      }
+    }
   };
 
   useEffect(() => {
