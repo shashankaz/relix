@@ -13,7 +13,7 @@ import {
 import { Link, useLocation } from "react-router";
 import { Button } from "./ui/button";
 import { useGSAP } from "@gsap/react";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 // import gsap from "gsap";
 
@@ -65,7 +65,7 @@ const Navbar = () => {
   return (
     <div
       className={cn(
-        "h-20 backdrop-blur-sm bg-white/50 flex items-center justify-between z-10",
+        "h-20 backdrop-blur-sm bg-gradient-to-b from-white to-transparent flex items-center justify-between z-10",
         !isOpen
           ? "sticky top-0 left-0 right-0 transition-transform"
           : "fixed inset-0 z-[9999]",
@@ -144,19 +144,17 @@ const Navbar = () => {
           <Equal />
         </motion.button>
       </div>
-      <AnimatePresence>
-        {isOpen && (
-          <motion.div
-            className="fixed inset-0"
-            initial={{ opacity: 0, scale: 0 }}
-            animate={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0 }}
-            key="box"
-          >
-            <OverLay setIsOpen={setIsOpen} location={location.pathname} />
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {isOpen && (
+        <motion.div
+          className="fixed inset-0"
+          initial={{ opacity: 0, scale: 0 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0 }}
+          // key="box"
+        >
+          <OverLay setIsOpen={setIsOpen} location={location.pathname} />
+        </motion.div>
+      )}
     </div>
   );
 };
@@ -172,10 +170,10 @@ const OverLay = ({ setIsOpen, location }: OverLayProps) => {
   return (
     <div id="mobile-menu" className="bg-white h-screen mt-20">
       <button
-        className="fixed right-3 top-[6.5rem] bg-black text-white p-2 rounded-full"
+        className="fixed right-3 top-[6.5rem] p-2 rounded-full"
         onClick={() => setIsOpen(false)}
       >
-        <X className="size-4" />
+        <X className="size-5" />
       </button>
       <ul className="flex flex-col gap-4 justify-center h-full text-xl font-medium px-10">
         <li
