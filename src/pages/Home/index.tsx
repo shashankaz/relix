@@ -43,7 +43,7 @@ const Home = () => {
       </div>
       <div className="my-10 md:my-14 grid grid-cols-2 sm:grid-cols-4 gap-6 text-center">
         {[
-          { number: "88k+", label: "Happy Clients" },
+          { number: "82k+", label: "Happy Clients" },
           { number: "98k+", label: "Premium Products" },
           { number: "868k+", label: "Projects Completed" },
           { number: "150k+", label: "Design Consultations" },

@@ -26,6 +26,10 @@ jobs:
       run: |
         IMAGE_URI=${{ secrets.ECR_REPOSITORY_URI }}:latest
 
-        docker build -t my-app .
+        docker build \
+          --build-arg VITE_UNSPLASH_CLIENT_ID=${{ secrets.VITE_UNSPLASH_CLIENT_ID }} \
+          --build-arg VITE_BACKEND_URL=${{ secrets.VITE_BACKEND_URL }} \
+          -t my-app .
+
         docker tag my-app:latest $IMAGE_URI
         docker push $IMAGE_URI
