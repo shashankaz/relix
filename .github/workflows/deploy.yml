@@ -20,11 +20,12 @@ jobs:
         aws-region: ${{ secrets.AWS_REGION }}
 
     - name: Login to Amazon ECR
-      id: login-ecr
       uses: aws-actions/amazon-ecr-login@v2
 
-    - name: Build, tag, and push Docker image to ECR
+    - name: Build, tag, and push Docker image
       run: |
-        docker build -t vite-app .
-        docker tag vite-app:latest ${{ secrets.ECR_REPOSITORY }}:latest
-        docker push ${{ secrets.ECR_REPOSITORY }}:latest
+        IMAGE_URI=${{ secrets.ECR_REPOSITORY_URI }}:latest
+
+        docker build -t my-app .
+        docker tag my-app:latest $IMAGE_URI
+        docker push $IMAGE_URI
