@@ -1,0 +1,15 @@
+version: "3.8"
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_UNSPLASH_CLIENT_ID: ${VITE_UNSPLASH_CLIENT_ID}
+        VITE_BACKEND_URL: ${VITE_BACKEND_URL}
+    environment:
+      - VITE_UNSPLASH_CLIENT_ID=${VITE_UNSPLASH_CLIENT_ID}
+      - VITE_BACKEND_URL=${VITE_BACKEND_URL}
+    ports:
+      - "80:80"
