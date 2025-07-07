@@ -1,11 +1,11 @@
-name: Build and Push to ECR
+name: Build and Deploy to ECS
 
 on:
   push:
     branches: [main]
 
 jobs:
-  build-and-push:
+  build-and-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -19,17 +19,35 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ secrets.AWS_REGION }}
 
-    - name: Login to Amazon ECR
+    - name: Log in to Amazon ECR
       uses: aws-actions/amazon-ecr-login@v2
 
-    - name: Build, tag, and push Docker image
+    - name: Build and push Docker image to ECR
+      env:
+        IMAGE_URI: ${{ secrets.ECR_REPOSITORY_URI }}:latest
+        VITE_UNSPLASH_CLIENT_ID: ${{ secrets.VITE_UNSPLASH_CLIENT_ID }}
+        VITE_BACKEND_URL: ${{ secrets.VITE_BACKEND_URL }}
       run: |
-        IMAGE_URI=${{ secrets.ECR_REPOSITORY_URI }}:latest
-
         docker build \
-          --build-arg VITE_UNSPLASH_CLIENT_ID=${{ secrets.VITE_UNSPLASH_CLIENT_ID }} \
-          --build-arg VITE_BACKEND_URL=${{ secrets.VITE_BACKEND_URL }} \
+          --build-arg VITE_UNSPLASH_CLIENT_ID=$VITE_UNSPLASH_CLIENT_ID \
+          --build-arg VITE_BACKEND_URL=$VITE_BACKEND_URL \
           -t my-app .
 
         docker tag my-app:latest $IMAGE_URI
         docker push $IMAGE_URI
+
+    - name: Render new ECS task definition
+      id: render-task
+      uses: aws-actions/amazon-ecs-render-task-definition@v1
+      with:
+        task-definition: ecs-task-definition.json
+        container-name: relix-container
+        image: ${{ secrets.ECR_REPOSITORY_URI }}:latest
+
+    - name: Deploy to ECS service
+      uses: aws-actions/amazon-ecs-deploy-task-definition@v1
+      with:
+        task-definition: ${{ steps.render-task.outputs.task-definition }}
+        service: relix-task-service-at4xw6x4
+        cluster: whimsical-shark-q168bm
+        wait-for-service-stability: true
