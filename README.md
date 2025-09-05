@@ -1,50 +1,43 @@
-# React + TypeScript + Vite
+# Relix - Interior Design & Home Styling
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A single-page interior design website built with React 18, Vite, TypeScript, Tailwind CSS, and react-router. It ships with an Nginx Docker image, Docker Compose, a Vercel rewrite config for SPA routing, and an AWS ECS task definition for container deployment.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 18 + Vite 6 + TypeScript 5
+- Tailwind CSS with shadcn-style UI primitives (Radix) and custom components
+- Client-side routing (react-router) with code splitting via React.lazy
+- Toasts, forms, and validation (react-hook-form + zod)
+- Production-ready Nginx config for SPA fallback
+- Containerized build and deploy (Dockerfile, docker-compose.yml, ECS task definition)
 
-## Expanding the ESLint configuration
+## Tech stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- App: React, React Router, TypeScript, Vite
+- Styling: Tailwind CSS, tailwind-merge, tailwindcss-animate, Radix UI primitives
+- Utils: axios, zod, react-hook-form, lucide-react, gsap
+- Tooling: ESLint
+- Hosting options: Docker/Nginx, Vercel, AWS ECS (Fargate)
 
-- Configure the top-level `parserOptions` property like this:
+## Getting started
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+### Prerequisites
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+- Node.js 20+ (Dockerfile uses Node 22). On Windows, install Node from nodejs.org.
+- npm 10+ (bundled with Node)
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Routing
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+The app uses `BrowserRouter` with these routes:
+
+- `/` — Home
+- `/about` — About
+- `/catalogue` — Catalogue
+- `/services` — Services
+- `/blog` — Blog list
+- `/blog/:slug` — Blog detail
+- `/faq` — FAQ
+- `/contact` — Contact
+- `/*` — Not Found
+
+SPA fallback is handled in production by Nginx and in Vercel via `vercel.json` rewrites.
